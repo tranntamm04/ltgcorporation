@@ -1,0 +1,48 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #F5F0E8;
+  --foreground: #1A1A1A;
+  --primary: #2D5A3D;
+  --primary-foreground: #FFFFFF;
+  --secondary: #E8D5C4;
+  --secondary-foreground: #1A1A1A;
+  --accent: #8B6F47;
+  --accent-foreground: #FFFFFF;
+  --border: #E0D5CA;
+  --muted: #D4C5B9;
+  --muted-foreground: #5A5A5A;
+}
+
+@layer base {
+  body {
+    @apply bg-cream text-text-dark font-sans;
+    scroll-behavior: smooth;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+    font-weight: 600;
+  }
+}
+
+@layer components {
+  .button-primary {
+    @apply px-6 py-3 bg-forest-green text-text-light rounded-sm font-medium hover:opacity-90 transition-all duration-300;
+  }
+  
+  .button-secondary {
+    @apply px-6 py-3 bg-warm-beige text-text-dark rounded-sm font-medium hover:opacity-90 transition-all duration-300;
+  }
+
+  .gallery-card {
+    @apply group relative overflow-hidden rounded-sm bg-white shadow-sm hover:shadow-lg transition-all duration-300;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold font-serif text-text-dark mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-muted-foreground max-w-2xl;
+  }
+}
