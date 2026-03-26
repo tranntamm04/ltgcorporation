@@ -21,13 +21,13 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
           <div className="w-10 h-10 rounded-sm bg-forest-green flex items-center justify-center text-text-light font-serif text-xl font-bold group-hover:opacity-90 transition-all">
-            G
+            GM
           </div>
-          <span className="hidden sm:inline font-serif text-2xl font-bold text-forest-green">Gallery</span>
+          <span className="hidden sm:inline font-serif text-2xl font-bold text-forest-green">TQPay</span>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="flex items-center gap-4 sm:gap-6 md:gap-8">
           <button
             onClick={() => scrollToSection('home')}
             className="text-text-dark hover:text-forest-green transition-colors font-medium"
@@ -35,16 +35,16 @@ export default function Header() {
             Home
           </button>
           <button
-            onClick={() => scrollToSection('gallery')}
+            onClick={() => scrollToSection('Ảnh')}
             className="text-text-dark hover:text-forest-green transition-colors font-medium"
           >
-            Gallery
+            Ảnh
           </button>
           <button
-            onClick={() => scrollToSection('collections')}
+            onClick={() => scrollToSection('Mục')}
             className="text-text-dark hover:text-forest-green transition-colors font-medium"
           >
-            Collections
+            Mục
           </button>
           <button
             onClick={() => scrollToSection('about')}
@@ -52,60 +52,8 @@ export default function Header() {
           >
             About
           </button>
-          <button
-            onClick={() => scrollToSection('contact')}
-            className="px-6 py-2 bg-forest-green text-text-light rounded-sm font-medium hover:opacity-90 transition-all"
-          >
-            Contact
-          </button>
         </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden p-2 text-forest-green hover:bg-warm-beige rounded-sm transition-colors"
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
       </nav>
-
-      {/* Mobile Navigation */}
-      {isMenuOpen && (
-        <div className="md:hidden border-t border-border-light bg-cream animate-slideUp">
-          <div className="max-w-7xl mx-auto px-4 py-4 space-y-3 flex flex-col">
-            <button
-              onClick={() => scrollToSection('home')}
-              className="text-left px-4 py-2 text-text-dark hover:text-forest-green hover:bg-warm-beige rounded-sm transition-all"
-            >
-              Home
-            </button>
-            <button
-              onClick={() => scrollToSection('gallery')}
-              className="text-left px-4 py-2 text-text-dark hover:text-forest-green hover:bg-warm-beige rounded-sm transition-all"
-            >
-              Gallery
-            </button>
-            <button
-              onClick={() => scrollToSection('collections')}
-              className="text-left px-4 py-2 text-text-dark hover:text-forest-green hover:bg-warm-beige rounded-sm transition-all"
-            >
-              Collections
-            </button>
-            <button
-              onClick={() => scrollToSection('about')}
-              className="text-left px-4 py-2 text-text-dark hover:text-forest-green hover:bg-warm-beige rounded-sm transition-all"
-            >
-              About
-            </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="text-left px-4 py-2 bg-forest-green text-text-light rounded-sm font-medium hover:opacity-90 transition-all w-full"
-            >
-              Contact
-            </button>
-          </div>
-        </div>
-      )}
     </header>
   );
 }

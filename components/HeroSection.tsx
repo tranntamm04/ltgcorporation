@@ -31,10 +31,10 @@ export default function HeroSection() {
       <div className="relative h-full flex flex-col items-center justify-center px-4">
         <div className="text-center animate-fadeIn">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-serif font-bold text-forest-green mb-6 text-balance">
-            Discover Visual Excellence
+            Giang Mai và những người bạn
           </h1>
           <p className="text-lg sm:text-xl text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Explore our curated collection of stunning images across nature, architecture, travel, and portraits. Each photograph tells a unique story.
+            Không biết viết cái gì ở phần này cả thế nên tự lướt xuống và xem ảnh đi, chả có gì hay ho đâu :v
           </p>
 
           {/* CTA Button */}
@@ -43,7 +43,7 @@ export default function HeroSection() {
               onClick={scrollToGallery}
               className="px-8 py-4 bg-forest-green text-text-light font-medium rounded-sm hover:opacity-90 transition-all duration-300 transform hover:scale-105 active:scale-95"
             >
-              Explore Gallery
+              Xem ảnh ngay
             </button>
             <button
               onClick={() => {
@@ -52,7 +52,7 @@ export default function HeroSection() {
               }}
               className="px-8 py-4 border-2 border-forest-green text-forest-green font-medium rounded-sm hover:bg-forest-green hover:text-text-light transition-all duration-300"
             >
-              View Collections
+              Bộ sưu tập
             </button>
           </div>
         </div>
